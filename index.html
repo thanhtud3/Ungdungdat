@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/442507895_831580669005891_1628018866964658885_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=J61240fywJcQ7kNvgFkXNcJ&_nc_ht=scontent-hkg4-1.xx&oh=00_AYD5YILekHdvm7lW-d_2pN6iD5ekisiYbjWAm0meCVfJDQ&oe=6657B6DF
+            ); /* Thay đổi URL này thành URL của hình nền Doremon */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .option {
+            margin: 10px 0;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .confirmation {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chào mừng bạn đến với code lỏ đầu tiên của Tú</h1>
+            <p>Hãy đưa ra các lựa chọn của bạn nếu MU thắng</p>
+        </header>
+        <form id="bookingForm">
+            <div class="option">
+                <input type="radio" id="movie" name="activity" value="Xem phim">
+                <label for="movie">Xem phim</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="dinner" name="activity" value="Đi ăn">
+                <label for="dinner">Đi ăn</label>
+            </div>
+            <button type="button" onclick="submitForm()">Đặt lịch</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation"></div>
+    </div>
+    <script>
+        function submitForm() {
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.textContent = 'Không làm mà đòi có ăn thì chịu rồi';
+            confirmationMessage.style.color = 'red';
+        }
+    </script>
+</body>
+</html>
